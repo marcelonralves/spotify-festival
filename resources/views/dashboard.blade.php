@@ -48,20 +48,60 @@
 </head>
 <body>
 
-<main>
-    <h1 class="visually-hidden">Heroes examples</h1>
+<div class="container py-3">
+    <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Seu festival!</h1>
+        </div>
+    </header>
 
-    <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold">Centered hero</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a type="button" href="https://accounts.spotify.com/authorize?client_id={{env('SPOTIFY_OAUTH_ID')}}&redirect_uri={{env('SPOTIFY_REDIRECT_URI')}}&response_type=code&scope={{env('SPOTIFY_OAUTH_SCOPES')}}" class="btn btn-primary btn-lg px-4 gap-3">Login com o Spotify</a>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">{{ now()->format('d/m') }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            @for($i=0; $i< 6; $i++)
+                            <li>{{ $artists[$i] }}</li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm ">
+                    <div class="card-header py-3 text-white bg-primary">
+                        <h4 class="my-0 fw-normal">{{ now()->addDay()->format('d/m') }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            @for($i=6; $i< 12; $i++)
+                                <li>{{ $artists[$i] }}</li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">{{ now()->addDays(2)->format('d/m') }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            @for($i=12; $i< 20; $i++)
+                                <li>{{ $artists[$i] }}</li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</main>
 
+    </main>
 
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

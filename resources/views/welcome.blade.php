@@ -49,12 +49,11 @@
 <body>
 
 <main>
-    <h1 class="visually-hidden">Heroes examples</h1>
 
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold">Centered hero</h1>
+        <h1 class="display-5 fw-bold">Quer saber seu festival?</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <p class="lead mb-4">Basta clicar no botão abaixo que você irá descobrir!</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a type="button" href="https://accounts.spotify.com/authorize?client_id={{env('SPOTIFY_OAUTH_ID')}}&redirect_uri={{env('SPOTIFY_REDIRECT_URI')}}&response_type=code&scope={{env('SPOTIFY_OAUTH_SCOPES')}}" class="btn btn-primary btn-lg px-4 gap-3">Login com o Spotify</a>
             </div>

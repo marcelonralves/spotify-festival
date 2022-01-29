@@ -19,6 +19,8 @@ class WebController extends Controller
 
         $artists = $spotify->getArtistsMostListen(session()->get('auth_spotify'));
 
+        shuffle($artists);
+
         return view('dashboard', compact('artists'));
 
     }
