@@ -52,6 +52,7 @@ class AuthController extends Controller
 
         try{
             $response = $this->client->request('GET', $endpoint, [
+                'limit' => 50,
                 'headers' => [
                     'Authorization' => 'Bearer ' . $auth
                 ]

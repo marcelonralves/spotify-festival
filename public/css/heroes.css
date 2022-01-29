@@ -1,3 +1,36 @@
+body {
+    background: #202124;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.title_festival {
+    color: #e8eaed;
+}
+
+.button-color {
+    background: #212529;
+    border-color : #212529;
+    color: #e8eaed
+}
+
+.button-color:hover {
+    background: #202124;
+    border-color : #202124;
+    color: #e8eaed;
+}
+.card_artists {
+    font-size: 30px;
+}
+
+.card_artists_title_main {
+    background-color: #676369;
+
+}
+
+.card_artists_main {
+    background-color: #848286;
+}
+
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);

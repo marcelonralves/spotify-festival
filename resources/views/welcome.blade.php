@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Heroes · Bootstrap v5.1</title>
+    <title>Spotifest</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
 
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -49,16 +49,17 @@
 <body>
 
 <main>
-
+<div class="container bg-white mb-5 rounded-3 px-5">
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold">Quer saber seu festival?</h1>
+        <h1 class="display-5 fw-bold">Como seria o seu festival?</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Basta clicar no botão abaixo que você irá descobrir!</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a type="button" href="https://accounts.spotify.com/authorize?client_id={{env('SPOTIFY_OAUTH_ID')}}&redirect_uri={{env('SPOTIFY_REDIRECT_URI')}}&response_type=code&scope={{env('SPOTIFY_OAUTH_SCOPES')}}" class="btn btn-primary btn-lg px-4 gap-3">Login com o Spotify</a>
+                <a type="button" href="https://accounts.spotify.com/authorize?client_id={{env('SPOTIFY_OAUTH_ID')}}&redirect_uri={{env('SPOTIFY_REDIRECT_URI')}}&response_type=code&scope={{env('SPOTIFY_OAUTH_SCOPES')}}" class="btn button-color btn-lg px-4 gap-3"><i class="fab fa-spotify"></i> Login com o Spotify</a>
             </div>
         </div>
     </div>
+</div>
 </main>
 
 

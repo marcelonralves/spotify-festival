@@ -13,11 +13,16 @@ class WebController extends Controller
 
     public function auth(Request $request)
     {
+
         $spotify = new AuthController();
 
         $spotify->auth($request->query('code'));
 
-        $artists = $spotify->getArtistsMostListen(session()->get('auth_spotify'));
+        if(!$request->session()->has('auth_spotify')) {
+            return view('welcome');
+        }
+
+        $artists = $spotify->getArtistsMostListen($request->session()->get('auth_spotify'));
 
         shuffle($artists);
 
