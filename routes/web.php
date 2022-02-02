@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\WebController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WebController::class, 'home']);
-Route::get('/auth', [WebController::class, 'auth']);
+Route::get('/', [ViewController::class, 'home']);
+Route::get('/auth/{provider}', [AuthController::class, 'auth']);
