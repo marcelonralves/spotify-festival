@@ -1,31 +1,5 @@
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Heroes · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
-
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    <meta name="theme-color" content="#7952b3">
-
-
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('css/heroes.css') }}" rel="stylesheet">
-</head>
-<body>
+@extends('layout')
+@section('content')
 
 <div class="container py-3">
     <header>
@@ -83,9 +57,4 @@
             </div>
         </div>
     </main>
-
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-
-
-</body>
-</html>
+@endsection
