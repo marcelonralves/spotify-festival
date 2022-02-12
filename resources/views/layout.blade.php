@@ -11,9 +11,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
 
-    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/all.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -41,12 +41,12 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/heroes.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/heroes.css') }}" rel="stylesheet">
 </head>
 <body>
 
 @yield('content')
 
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ secure_asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
