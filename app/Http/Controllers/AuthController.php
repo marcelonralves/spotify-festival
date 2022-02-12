@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuthRequest;
 use App\Interfaces\OAuthLogin;
 use App\Repositories\AuthRepository;
 use App\Services\SpotifyService;
@@ -19,11 +20,11 @@ class AuthController extends Controller
         $this->repository = $repository;
     }
 
-    public function auth(Request $request, string $provider)
+    public function auth(AuthRequest $request, string $provider)
     {
         try {
             $artists = $this->repository->dashboardUser($request->query('code'), $provider);
-        } catch (\Exception $e) {
+        } catch (\Exception) {
             return view('welcome');
         }
        return view('dashboard', compact('artists'));

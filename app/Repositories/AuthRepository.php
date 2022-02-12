@@ -12,7 +12,6 @@ class AuthRepository
     {
         $getProvider = $this->getProvider($provider);
         $getProvider->authCode($code);
-
         if(!session()->has('auth_streaming')) {
             return view('welcome');
         }
@@ -23,11 +22,13 @@ class AuthRepository
         return $userAuth;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function getProvider(string $provider) : OAuthLogin
     {
-        switch ($provider) {
-            case "spotify":
-                return new SpotifyService();
+        if ($provider == "spotify") {
+            return new SpotifyService();
         }
         throw new \Exception("Esse método de login não é válido. Faça uma nova tentativa!");
     }

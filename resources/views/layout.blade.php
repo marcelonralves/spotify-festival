@@ -11,9 +11,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
 
-    <link rel="stylesheet" href="{{ secure_asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -44,12 +44,12 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="{{ secure_asset('css/heroes.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/heroes.css') }}" rel="stylesheet">
 </head>
 <body>
 
 @yield('content')
 
-<script src="{{ secure_asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

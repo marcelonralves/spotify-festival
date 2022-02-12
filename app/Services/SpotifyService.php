@@ -39,10 +39,9 @@ class SpotifyService implements OAuthLogin
 
 
             session()->put('auth_streaming', $response['access_token']);
-
             return true;
 
-        } catch (GuzzleException $exception) {
+        } catch (GuzzleException) {
             return false;
         }
     }
