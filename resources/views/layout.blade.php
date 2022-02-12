@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{ secure_asset('css/all.css') }}">
     <!-- Bootstrap core CSS -->
     <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
